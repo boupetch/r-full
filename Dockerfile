@@ -25,7 +25,7 @@ RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
                             'ggplot2', 'eegkit','edfReader','eegkitdata','ica','dygraphs', 'stringr',\
                             'dismo','rgdal','httr','sp','geosphere',\
                             'tm.plugin.mail', 'Rtsne','geojsonio','RCurl','caTools','flexdashboard',\
-                            'DT','threejs', 'magick'), \
+                            'DT','threejs', 'magick','RcppRedis'), \
   repos='https://cloud.r-project.org/')" \
   && R -e "devtools::install_github(\"mrjoh3/pier\")" \
   && R -e "devtools::install_github(\"ropensci/plotly\")" \
