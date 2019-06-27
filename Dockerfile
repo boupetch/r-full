@@ -16,7 +16,7 @@ RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
   && curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg > /tmp/dkey; apt-key add /tmp/dkey \
   && add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/$(. /etc/os-release; echo "$ID") $(lsb_release -cs) stable" \
   && apt-get update \
-  && apt-get -y install docker-ce  \
+  && apt-get -y install docker-ce docker-compose  \
   && R -e "install.packages(c('shiny', 'dplyr','chron','leaflet.extras','plotly', \
                             'rmarkdown', 'readxl' , 'signal', 'lubridate', 'htmlwidgets', 'rgl', 'e1071', \
                             'bookdown', 'blogdown', 'tidyr', 'caret', 'zoo', 'xts', 'testthat', 'roxygen2', \
