@@ -25,10 +25,11 @@ RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
                             'ggplot2', 'eegkit','edfReader','eegkitdata','ica','dygraphs', 'stringr',\
                             'dismo','rgdal','httr','sp','geosphere',\
                             'tm.plugin.mail', 'Rtsne','geojsonio','RCurl','caTools','flexdashboard',\
-                            'DT','threejs', 'magick','RcppRedis','reshape','wesanderson','MESS'), \
+                            'DT','threejs', 'magick','RcppRedis','reshape','wesanderson','MESS','future'), \
   repos='https://cloud.r-project.org/')" \
   && R -e "devtools::install_github(\"mrjoh3/pier\")" \
   && R -e "devtools::install_github(\"ropensci/plotly\")" \
   && R -e "devtools::install_github(\"rstudio/keras\")" \
   && R -e "devtools::install_github(\"boupetch/sleepr\")" \
+  && R -e "devtools::install_github(\"boupetch/rsleep\")" \
   && R -e "library(keras);install_keras()" \
